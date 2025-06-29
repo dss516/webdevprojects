@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .containor {
+            background-color: aqua;
+            height: 75vh;
+            width: 75vw;
+            position: absolute;
+        }
+
+        .box {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            border-radius: 60px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: aniX 3s linear infinite,aniY 1s ease-out infinite alternate;
+            /* animation-name: aniY,aniX;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: infinite; */
+        }
+
+        @keyframes aniX {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+                /* transform: translate(500px); */
+            }
+        }
+
+        @keyframes aniY {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 100%;
+                /* transform: translateY(-1500px); */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containor">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
